@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest book</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <h1>Leave a message</h1>
+    <form id="messageForm">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Your username"
+        id="username"
+        name="username"
+        required
+      />
+      <label for="message">Your message</label>
+      <textarea
+        type="textarea"
+        placeholder="Your message"
+        id="yourmesssage"
+        name="message"
+        rows="5"
+        cols="50"
+      ></textarea>
+      <div class="emojiradio">
+        <input
+          type="radio"
+          required
+          id="rdbtn1"
+          name="emoji"
+          value="./images/happy_emoji.jpg"
+        />
+        <img src="./images/happy_emoji.jpg" />
+        <input
+          type="radio"
+          id="rdbtn2"
+          name="emoji"
+          value="./images/grumpy_emoji.jpg"
+        />
+        <img src="./images/grumpy_emoji.jpg" />
+        <input
+          type="radio"
+          id="rdbtn3"
+          name="emoji"
+          value="./images/sad_emoji.jpg"
+        />
+        <img src="./images/sad_emoji.jpg" />
+        <input
+          type="radio"
+          id="rdbtn4"
+          name="emoji"
+          value="./images/embar_emoji.jpg"
+        />
+        <img src="./images/embar_emoji.jpg" />
+      </div>
+      <button>Go</button>
+    </form>
+    <div id="app"></div>
+  </body>
+</html>

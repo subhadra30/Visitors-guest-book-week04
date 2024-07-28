@@ -7,20 +7,25 @@ messageForm.addEventListener("submit", async function (event) {
   const formValues = Object.fromEntries(formData);
   console.log(formValues);
 
-  const response = await fetch("http://localhost:8080/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formValues),
-  });
+  const response = await fetch(
+    "https://visitors-guest-book-week04.onrender.com/messages",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    }
+  );
   const data = response.json();
   console.log(data);
   fetchMessages();
 });
 
 async function fetchMessages() {
-  const result = await fetch("http://localhost:8080/messages");
+  const result = await fetch(
+    "https://visitors-guest-book-week04.onrender.com/messages"
+  );
   console.log(result);
   const messages = await result.json();
   console.log("messages from server messages-->" + messages);
